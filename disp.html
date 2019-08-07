@@ -1,0 +1,60 @@
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<link rel="stylesheet" href="css\sugandh.css">
+		<script type="text/javascript">
+			window.onload = function () {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        data = {}, tmp;
+    for (var i = 0, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+    }
+    data.Name=data.Name.replace("+"," ");
+    data.Address=data.Address.replace("+"," ");
+    data.Address=data.Address.replace("%2F","/");
+    data.Address=data.Address.replace("%2C",",");
+    // data.Image=createElement("data.Image");
+
+    document.getElementById('name').innerHTML = data.Name;
+     document.getElementById('address').innerHTML = data.Address;
+      document.getElementById('received').innerHTML = data.Received;
+       document.getElementById('receipt').innerHTML = data.Receipt_no;
+       document.getElementById('Im').innerHTML = data.Image;
+
+
+}
+
+		</script>
+	</head>
+	<body>
+		<div class="container disp">
+			<div id="image">
+
+				<img src='logo.jpg' width:200px height:100px>
+		   </div>
+	   <div id ="number_1" >Receipt No: <span id="receipt"></span></div>
+	    <br>
+	    <br>
+	    <p>We have received an amount of Rs.<span id="received"></span> from</p> 
+	    <p><span id="name"></span>,<span id="address"> </span> on 5 August 2019</p>
+	    <br>
+	    <br>
+	    <br>
+	    Thank You,
+	    <div id="Im"></div>
+
+	</div>
+	</body>
+	</html>
+	
+		
+	
+	
+
+
+
