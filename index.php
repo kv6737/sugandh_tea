@@ -1,1 +1,2 @@
-<?php include_once("sugandhtea.html","disp.html");?>
+<?php include_once("sugandhtea.html");?>
+<?php include_once("disp.html");?>
